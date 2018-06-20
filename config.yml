@@ -1,0 +1,47 @@
+%YAML 1.1
+---
+# utf-8
+#  
+# Крайне важно соблюдать отступы - они задают структуру
+#   Здесь можно конфигурить параметры, инициируемые в Config.py => CONFIG --
+#     с соблюдением структуры конечно же
+#
+# Параметры, заданные здесь могут быть переписаны:
+#  - переменными окружения  (список поддерживаемых: Config.py => SUPPORTED_ENV)
+#  - параметрами ком.строки (наивысший приоритет)
+#
+ldap:
+  url:          'company.local'
+  bind_dn:      'CN=ldap,CN=Users,DC=company,DC=local'
+  search_dn:    'dc=company,dc=local'
+  group_traversal: True # -- non implemented yet -- 
+
+
+svn:
+    repos_root:   '/home/svn'
+#
+# В ветке access перечисляются имена репозиториев и доступы к ним
+#   ветка "default" применяется когда имя репозитория не сконфигурено.
+#
+# Дефолтные значения
+#  perms: 'r'
+#  EVERYONE: ''
+#
+    access:
+          default:
+                DEFAULT_GROUP: rw
+
+                syncuser:
+                        type: user
+
+                builduser:
+                        type: user
+
+
+          shared: # пермишны для svn://shared
+                svn-shared:
+                            type: group
+                            perms: 'rw'
+
+                EVERYONE: 'r'
+...
