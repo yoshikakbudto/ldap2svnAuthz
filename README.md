@@ -1,4 +1,5 @@
-# ldap2svnAuthz
+# ldap2svnAuthz,  inspired by whitlockjc's sync-ldap-groups-to-svn-authz.py
+
 ## Назначение
 Генерирует на основе файла конфигурации (yaml) файл доступов conf/authz
 
