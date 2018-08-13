@@ -1,3 +1,4 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/yoshikakbudto/ldap2svnAuthz?branch=master)](https://bettercodehub.com/)
 # ldap2svnAuthz,  inspired by whitlockjc's sync-ldap-groups-to-svn-authz.py
 
 ## Назначение
